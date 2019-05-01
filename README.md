@@ -2,18 +2,18 @@
 
 This is a detailed guide on how to create a video batch processing solution by leveraging S3, Lambda, and Fargate. 
 
-When a user uploads a .mp4 video file to the designated S3 bucket, a Lambda function is triggered that runs a task in Fargate, which downloads the specified watermark from the S3 bucket and overlays it onto the video using ffmpeg. Once the video finishes processing, the Fargate task then uploads it back into the S3 bucket.
+When a user uploads a [.mp4 video file](https://raw.githubusercontent.com/akozdrow/batch-processing-demo/master/test-video.mp4) to the designated S3 bucket, a Lambda function is triggered that runs a task in Fargate, which downloads the specified watermark from the S3 bucket and overlays it onto the video using ffmpeg. Once the video finishes processing, the Fargate task then uploads the [processed video](https://raw.githubusercontent.com/akozdrow/batch-processing-demo/master/watermark-test-video.mp4) with the overlayed watermark back into the S3 bucket.
 
 # Implementation Steps
-
-### Configure the S3 Bucket
-
-1. Create an S3 bucket with the default options selected. Assume that the name "video-batch-processing-bucket" is chosen and given to the bucket.
-2. Within the newly created bucket, create two folders. Title one folder "unprocessed-vdeos" and title the other folder "watermarks". When a new .mp4 video 
 
 ### Create the Necessary IAM Roles with the Correct Policies Attached
 
 ##### IAM Role for ECS to access 
+
+### Configure the S3 Bucket
+
+1. Create an S3 bucket with the default options selected. Assume that the name "video-batch-processing-bucket" is chosen and given to the bucket.
+2. Within the newly created bucket, create two folders. Title one folder "unprocessed-vdeos" and title the other folder "watermarks". When a new .mp4 video is uploaded into the unprocessed-videos folder, this will trigger an event (the event will be configured in the Lambda section) that kicks off the video watermarking process. The watermarks folder is a place to store various watermarks which can be applied onto uploaded videos. Processed videos will be reuploaded directly into the bucket and will not sit within any folder.
 
 ### Create the ECS Cluster
 
