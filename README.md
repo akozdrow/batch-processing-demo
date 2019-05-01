@@ -20,7 +20,7 @@ When a user uploads a [.mp4 video file](https://raw.githubusercontent.com/akozdr
 2. Click "Create Role" and choose "Elastic Container Service" for the service that will use your role.
 3. Select "Elastic Container Service Task" for your use case.
 4. Click "Next:Permissions", click "Create Policy", and click on the "JSON" tab.
-5. Copy and paste the [following permissions policy](#TODO), and make sure that within the policy all references to "video-batch-processing-bucket" are replaced by the name of your own bucket. Click "Review policy".
+5. Copy and paste the [following permissions policy](https://raw.githubusercontent.com/akozdrow/batch-processing-demo/master/ecsS3Access.json), and make sure that within the policy all references to "video-batch-processing-bucket" are replaced by the name of your own bucket. Click "Review policy".
 5. Give the policy a name of "ecsS3Access", give it a description, and click "Create policy".
 8. Back to where the role is being created, search for the newly created ecsS3Access permissions policy and attach it to the role. 
 6. Skip through adding any tags.
