@@ -34,7 +34,7 @@ When a user uploads a [.mp4 video file](https://raw.githubusercontent.com/akozdr
 4. Copy and paste the [following permissions policy](https://raw.githubusercontent.com/akozdrow/batch-processing-demo/master/ecsS3Access.json)
 5. Give the policy a name of "ecsRunTask", give it a description, and click "Create policy".
 6. Back to where the role is being created, search for the newly created ecsRunTask permissions policy and attach it to the role by clicking the checkbox next to the policy name.
-7. Search for the "AWSLambdaBasicExecutionRole" policy and attach it to the role by clicking the checkbox next to the policy name.
+7. Search for the "AWSLambdaBasicExecutionRole" policy and attach it to the role as well by clicking the checkbox next to the policy name.
 8. Skip through adding any tags.
 9. Give the role the name "lambdaExecutionRole" and click "Create role".
 
