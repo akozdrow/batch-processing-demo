@@ -2,7 +2,7 @@
 
 This is a detailed guide on how to create a video batch processing solution by leveraging S3, Lambda, and Fargate. 
 
-When a user uploads a [.mp4 video file](https://raw.githubusercontent.com/akozdrow/batch-processing-demo/master/test-video.mp4) to the designated S3 bucket, a Lambda function is triggered that runs a task in Fargate, which downloads the specified watermark from the S3 bucket and overlays it onto the video using ffmpeg. Once the video finishes processing, the Fargate task then uploads the [processed video](https://raw.githubusercontent.com/akozdrow/batch-processing-demo/master/watermark-test-video.mp4) with the overlayed watermark back into the S3 bucket.
+When a user uploads a [.mp4 video file](https://raw.githubusercontent.com/akozdrow/batch-processing-demo/master/test-video.mp4) to the designated S3 bucket, a Lambda function is triggered that runs a task in Fargate, which downloads the specified watermark from the S3 bucket and overlays it onto the video using ffmpeg. Once the video finishes processing, the Fargate task then uploads the [processed video with the overlayed watermark](https://raw.githubusercontent.com/akozdrow/batch-processing-demo/master/watermark-test-video.mp4) back into the S3 bucket.
 
 # Implementation Steps
 
