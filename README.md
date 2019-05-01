@@ -8,7 +8,8 @@ When a user uploads a .mp4 video file to the designated S3 bucket, a Lambda func
 
 ### Configure the S3 Bucket
 
-1. 
+1. Create an S3 bucket with the default options selected. Assume that the name "video-batch-processing-bucket" is chosen and given to the bucket.
+2. Within the newly created bucket, create two folders. Title one folder "unprocessed-vdeos" and title the other folder "watermarks". When a new .mp4 video 
 
 ### Create the Necessary IAM Roles with the Correct Policies Attached
 
