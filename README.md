@@ -21,17 +21,22 @@ When a user uploads a [.mp4 video file](https://raw.githubusercontent.com/akozdr
 3. Select "Elastic Container Service Task" for your use case.
 4. Click "Next:Permissions", click "Create Policy", and click on the "JSON" tab.
 5. Copy and paste the [following permissions policy](https://raw.githubusercontent.com/akozdrow/batch-processing-demo/master/ecsS3Access.json), and make sure that within the policy all references to "video-batch-processing-bucket" are replaced by the name of your own bucket. Click "Review policy".
-5. Give the policy a name of "ecsS3Access", give it a description, and click "Create policy".
-8. Back to where the role is being created, search for the newly created ecsS3Access permissions policy and attach it to the role. 
-6. Skip through adding any tags.
-7. Give the role the name "ecsS3TaskRole" and click "Create role".
+6. Give the policy a name of "ecsS3Access", give it a description, and click "Create policy".
+7. Back to where the role is being created, search for the newly created ecsS3Access permissions policy and attach it to the role by clicking the checkbox next to the policy name.
+8. Skip through adding any tags.
+9. Give the role the name "ecsS3TaskRole" and click "Create role".
 
 ##### IAM Role for Lambda functions to trigger ECS tasks
 
 1. Navigate to the Identity and Access Management section of the AWS console and click "Roles" on the sidebar.
 2. Click "Create Role" and choose "Lambda" for the service that will use your role.
-3. Click "Next:Permissions"
-4. 
+3. Click "Next:Permissions", click "Create Policy", and click on the "JSON" tab
+4. Copy and paste the [following permissions policy](https://raw.githubusercontent.com/akozdrow/batch-processing-demo/master/ecsS3Access.json)
+5. Give the policy a name of "ecsRunTask", give it a description, and click "Create policy".
+6. Back to where the role is being created, search for the newly created ecsRunTask permissions policy and attach it to the role by clicking the checkbox next to the policy name.
+7. Search for the "AWSLambdaBasicExecutionRole" policy and attach it to the role by clicking the checkbox next to the policy name.
+8. Skip through adding any tags.
+9. Give the role the name "lambdaExecutionRole" and click "Create role".
 
 
 ### III. Create and Configure the Lambda Function
