@@ -31,7 +31,7 @@ When a user uploads a [.mp4 video file](https://raw.githubusercontent.com/akozdr
 1. Navigate to the Identity and Access Management section of the AWS console and click "Roles" on the sidebar.
 2. Click "Create Role" and choose "Lambda" for the service that will use your role.
 3. Click "Next:Permissions", click "Create Policy", and click on the "JSON" tab
-4. Copy and paste the [following permissions policy](https://raw.githubusercontent.com/akozdrow/batch-processing-demo/master/ecsS3Access.json)
+4. Copy and paste the [following permissions policy](https://raw.githubusercontent.com/akozdrow/batch-processing-demo/master/ecsRunTask.json)
 5. Give the policy a name of "ecsRunTask", give it a description, and click "Create policy".
 6. Back to where the role is being created, search for the newly created ecsRunTask permissions policy and attach it to the role by clicking the checkbox next to the policy name.
 7. Search for the "AWSLambdaBasicExecutionRole" policy and attach it to the role as well by clicking the checkbox next to the policy name.
