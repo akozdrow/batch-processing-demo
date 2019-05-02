@@ -38,8 +38,15 @@ When a user uploads a [.mp4 video file](https://raw.githubusercontent.com/akozdr
 8. Skip through adding any tags.
 9. Give the role the name "lambdaExecutionRole" and click "Create role".
 
-
 ### III. Create and Configure the Lambda Function
+
+1. Navigate to the Lambda section of the AWS console and click "Create function".
+2. Make sure that "Author from scratch" is selected, give the function a name of "ecs-task-runner", and select Python 3.7 for the runtime environment.
+3. Expand the permissions section and select "Use an existing role". In the existing role options window, select the "lambdaExecutionRole" which was created in the previous steps. Then, click 'Create function".
+4. Add S3 as a trigger for the lambda function, select the video-batch-processing-bucket as the bucket that serves as the event source, type "unprocessed-videos/" in the prefix section, type ".mp4" in the suffix section, and finally click the "Add" to fully configure the event.
+5. Copy and paste the [following lambda function code](https://raw.githubusercontent.com/akozdrow/batch-processing-demo/master/lambda_function.py) into the code editor.
+6. Copy and paste one at a time the following environment variables into the lambda environment variable section.
+7. Click the "Save" button in the upper right hand corner of the console.
 
 ### IV. Create the ECS Cluster
 
