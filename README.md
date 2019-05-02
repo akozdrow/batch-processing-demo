@@ -43,7 +43,7 @@ When a user uploads a [.mp4 video file](https://raw.githubusercontent.com/akozdr
 8. Skip through adding any tags.
 9. Give the role the name "lambdaExecutionRole" and click "Create role".
 
-*CONTEXT: This role will allow Lambda functions to trigger tasks in ECS and write to CloudWatch logs."
+*CONTEXT: This role will allow Lambda functions to trigger tasks in ECS and write to CloudWatch logs.*
 
 ### III. Create the ECS Cluster
 
