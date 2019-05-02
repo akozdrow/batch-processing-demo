@@ -1,0 +1,10 @@
+{
+  "CLUSTER":"batch-processing-cluster",
+  "CONTAINER_NAME":"batch-processing-container",
+  "COUNT":"1",
+  "ECS_SECURITY_GROUP":"sg-xxxxxxxxxxxxxxxxxx",
+  "ECS_SUBNET_1":"subnet-xxxxxxxxxxxxxxxxxx",
+  "ECS_SUBNET_2":"subnet-xxxxxxxxxxxxxxxxxx",
+  "TASK_DEFINITION":"arn:aws:ecs:us-east-2:xxxxxxxxxxxx:task-definition/batch-processing-task:1",
+  "WATERMARK_PATH":"s3://video-batch-processing-bucket/watermarks/watermark.png",
+}
